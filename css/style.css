@@ -157,11 +157,12 @@ a.icon:hover {
 
 .second__item {
    height: 876px;
+   background: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)),
+   url('https://images.unsplash.com/photo-1516919549054-e08258825f80?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=2250&q=80');
    background-position: center;
    background-repeat: no-repeat;
    background-size: cover;
-   background: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)),
-      url('https://images.unsplash.com/photo-1578985545062-69928b1d9587?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=2180&q=80');
+   
 }
 
 .third__item {
@@ -363,6 +364,271 @@ a.icon:hover {
       color: white;
       font-family: 'Montserrat',
          sans-serif;
+   }
+
+}
+
+.product__list{
+   background-color: #e7305b;
+
+}
+
+.product__list__title h1 {
+   display: flex;
+   justify-content: center;
+   font-family: 'Montserrat',
+   sans-serif;
+   color: white;
+   font-size: 5rem;
+   position: relative;
+   text-align: center;
+   font-weight: normal;
+
+   padding-bottom: 5px;
+
+}
+.product__list__title h1::after{
+   content: "";
+   position: absolute;
+   bottom: 0;
+   left: 0;
+   width: 700px;
+   height: 3px;
+   background-color: white;
+   right: 0;
+   margin: 0 auto;
+   display: block;
+
+}
+.product__list__container {
+   background-color:#e7305b;
+   padding-top: 100px ;
+   width: 100%;
+   height: 90vh;
+   display: flex;
+   justify-content: center;
+}
+
+.product__list__container2 {
+   background-color: #e7305b;
+   width: 100%;
+   height: 90vh;
+   display: flex;
+   justify-content: center;
+}
+
+p {
+   margin: 0.8em 0;
+   padding: 0;
+   font-family: 'Yellowtail',
+   cursive;
+}
+
+.name__cake{
+   font-family: 'Yellowtail',
+   cursive;
+}
+
+.card__description{
+   font-family: 'Yellowtail',
+   cursive;
+}
+.card__name{
+   font-family: 'Montserrat',
+   sans-serif;
+}
+.product__cards {
+   font-size: 0;
+}
+
+.product__card {
+   display: inline-block;
+   margin: 8px;
+   width: 300px;
+   min-height: 280px;
+   font-size: 16px;
+   background-color: #ffffff;
+   border-radius: 2px;
+   box-shadow: 0 12px 15px 0 rgba(0, 0, 0, 0.24);
+}
+
+.product__card .product__heading1 {
+   background-image: url('https://images.unsplash.com/photo-1535141192574-5d4897c12636?ixlib=rb-1.2.1&auto=format&fit=crop&w=935&q=80');
+   background-position: center;
+   background-repeat: no-repeat;
+   background-size: cover;
+   position: relative;
+   height: 360px;
+   color: #ffffff;
+}
+.product__card .product__heading1 h1 {
+   position: absolute;
+   bottom: 16px;
+   left: 16px;
+   font-size: 24px;
+}
+
+.product__card .product__heading2 {
+   background-image: url('https://images.unsplash.com/photo-1569929232526-d9c6578e1531?ixlib=rb-1.2.1&auto=format&fit=crop&w=3400&q=80');
+   background-position: center;
+   background-repeat: no-repeat;
+   background-size: cover;
+   position: relative;
+   height: 360px;
+   color: #ffffff;
+}
+
+
+
+.product__card .product__heading3 {
+   background-image: url('https://images.unsplash.com/photo-1558301211-0d8c8ddee6ec?ixlib=rb-1.2.1&auto=format&fit=crop&w=890&q=80');
+   background-position: center;
+   background-repeat: no-repeat;
+   background-size: cover;
+   position: relative;
+   height: 360px;
+   color: #ffffff;
+}
+
+
+.product__card .product__heading2 h1 {
+   position: absolute;
+   bottom: 16px;
+   left: 16px;
+   font-size: 24px;
+}
+
+.product__card .card__content {
+   padding: 16px;
+}
+
+.product__card .product__heading4 {
+   background-image: url('https://images.unsplash.com/photo-1521469048000-5d02be3cbe49?ixlib=rb-1.2.1&auto=format&fit=crop&w=934&q=80');
+   background-position: center;
+   background-repeat: no-repeat;
+   background-size: cover;
+   position: relative;
+   height: 360px;
+   color: #ffffff;
+}
+
+.product__card .product__heading4 h1 {
+   position: absolute;
+   bottom: 16px;
+   left: 16px;
+   font-size: 24px;
+}
+
+.product__card .product__heading5 {
+   background-image: url('https://images.unsplash.com/photo-1522057384400-681b421cfebc?ixlib=rb-1.2.1&auto=format&fit=crop&w=934&q=80');
+   background-position: center;
+   background-repeat: no-repeat;
+   background-size: cover;
+   position: relative;
+   height: 360px;
+   color: #ffffff;
+}
+
+.product__card .product__heading5 h1 {
+   position: absolute;
+   bottom: 16px;
+   left: 16px;
+   font-size: 24px;
+}
+
+.product__card .product__heading6 {
+   background-image: url('https://images.unsplash.com/photo-1562440499-64c9a111f713?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=934&q=80');
+   background-position: center;
+   background-repeat: no-repeat;
+   background-size: cover;
+   position: relative;
+   height: 360px;
+   color: #ffffff;
+}
+
+.product__card .product__heading6 h1 {
+   position: absolute;
+   bottom: 16px;
+   left: 16px;
+   font-size: 24px;
+}
+
+
+@media screen and (max-width: 950px) {
+   .product__list__title h1 {
+      display: flex;
+      justify-content: center;
+      font-family: 'Montserrat',
+         sans-serif;
+      color: white;
+      font-size: 2rem;
+      position: relative;
+      text-align: center;
+      font-weight: normal;
+
+      padding-bottom: 10px;
+
+   }
+
+   .product__list__title h1::after {
+      content: "";
+      position: absolute;
+      bottom: 0;
+      left: 0;
+      width: 300px;
+      height: 3px;
+      background-color: white;
+      right: 0;
+      margin: 0 auto;
+      display: block;
+
+   }
+
+   .product__list__container {
+      background-color: #e7305b;
+      padding-top: 100px;
+      width: 100%;
+      height: 1500px;
+      display: flex;
+      justify-content: center;
+   }
+
+}
+
+footer{
+   display: flex;
+   align-items: center;
+   justify-content: center;
+
+   z-index: 1000;
+   background-color: #393e46;
+   width: 100%;
+   height: 160px;
+}
+footer a {
+   text-decoration: none;
+   color: #12cad6;
+   font-family: 'Roboto',
+   sans-serif;
+}
+
+.footer__menu{
+   display: flex;
+   justify-content: space-evenly;
+   z-index: 1001;
+   width: 70%;
+   height: 30px;
+
+}
+
+@media screen and (max-width: 500px) {
+   .footer__menu {
+      display: flex;
+      justify-content: space-between;
+      z-index: 1001;
+      width: 90%;
+      height: 30px;
+
    }
 
 }
