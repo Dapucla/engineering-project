@@ -2,12 +2,8 @@
    margin: 0;
    padding: 0;
    box-sizing: border-box;
-   -webkit-box-sizing: border-box;
-   -moz-box-sizing: border-box;
-   -webkit-font-smoothing: antialiased;
-   -moz-font-smoothing: antialiased;
-   -o-font-smoothing: antialiased;
-   font-smoothing: antialiased;
+
+
    text-rendering: optimizeLegibility;
 }
 
@@ -162,8 +158,7 @@ fieldset {
 #contact input[type="tel"]:hover,
 #contact input[type="url"]:hover,
 #contact textarea:hover {
-   -webkit-transition: border-color 0.3s ease-in-out;
-   -moz-transition: border-color 0.3s ease-in-out;
+
    transition: border-color 0.3s ease-in-out;
    border: 1px solid #aaa;
 }
@@ -187,8 +182,7 @@ fieldset {
 
 #contact button[type="submit"]:hover {
    background: #43A047;
-   -webkit-transition: background 0.3s ease-in-out;
-   -moz-transition: background 0.3s ease-in-out;
+
    transition: background-color 0.3s ease-in-out;
 }
 
@@ -206,21 +200,7 @@ fieldset {
    border: 1px solid #aaa;
 }
 
-::-webkit-input-placeholder {
-   color: #888;
-}
 
-:-moz-placeholder {
-   color: #888;
-}
-
-::-moz-placeholder {
-   color: #888;
-}
-
-:-ms-input-placeholder {
-   color: #888;
-}
 
 h3 {
    color: white;
