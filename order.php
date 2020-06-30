@@ -146,7 +146,7 @@
             </div>
             <div class="form-group">
                <label>Доставка</label>
-               <input type="text" name="delivery" class="form-control" value="<?php echo $delivery; ?>" placeholder="Да или нет?">
+               <input type="text" name="delivery" class="form-control" value="<?php echo $delivery; ?>" placeholder="Да или самовывоз">
             </div>
             <div class="form-group">
                <?php

@@ -52,7 +52,7 @@ if (isset($_POST['update'])) {
    $location = $_POST['location'];
    $telephone = $_POST['telephone'];
 
-   $mysqli->query("UPDATE contact SET name='$name', location='$location', telephone='$telephone'[ WHERE id=$id") or die($mysqli->error);
+   $mysqli->query("UPDATE contact SET name='$name', location='$location', telephone='$telephone' WHERE id=$id") or die($mysqli->error);
 
    $_SESSION['message'] = "Информация о пользователе была";
    $_SESSION['msg_type'] = "warning";
