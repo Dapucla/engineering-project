@@ -50,7 +50,7 @@ if (isset($_POST['update'])) {
 
    $mysqli->query("UPDATE data2 SET name='$name', location='$location' WHERE id=$id") or die($mysqli->error);
 
-   $_SESSION['message'] = "Информация о пользователе была";
+   $_SESSION['message'] = "Информация о пользователе была обновлена";
    $_SESSION['msg_type'] = "warning";
 
    header('location: crud.php');

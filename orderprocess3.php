@@ -6,18 +6,12 @@ $mysqli = new mysqli('std-mysql', 'std_972', 'dapa0803', 'std_972') or die(mysql
 
 $id = 0;
 $update = false;
-$name = '';
-$location = '';
-$summ = '';
-$address = '';
+$comment = '';
 
 if (isset($_POST['save'])) {
-   $name = $_POST['name'];
-   $location = $_POST['location'];
-   $summ = $_POST['summ'];
-   $address = $_POST['address'];
+   $comment = $_POST['comment'];
 
-   $mysqli->query("INSERT INTO desert1 (name, location, summ, address) VALUES('$name','$location','$summ','$address')") or die($mysqli->error);
+   $mysqli->query("INSERT INTO comment (comment) VALUES('$comment')") or die($mysqli->error);
 
    $_SESSION['message'] = "Десерт был добавлен в заказ";
    $_SESSION['msg_type'] = "success";
@@ -28,7 +22,7 @@ if (isset($_POST['save'])) {
 
 if (isset($_GET['delete'])) {
    $id = $_GET['delete'];
-   $mysqli->query("DELETE FROM desert1 WHERE id=$id") or die($mysqli->error);
+   $mysqli->query("DELETE FROM comment WHERE id=$id") or die($mysqli->error);
 
    $_SESSION['message'] = "Заказ был удален!";
    $_SESSION['msg_type'] = "danger";
@@ -39,7 +33,7 @@ if (isset($_GET['delete'])) {
 if (isset($_GET['edit'])) {
    $id = $_GET['edit'];
    $update = true;
-   $result = $mysqli->query("SELECT * FROM desert1 WHERE id=$id") or die($mysqli->error);
+   $result = $mysqli->query("SELECT * FROM comment WHERE id=$id") or die($mysqli->error);
    if (count($result) == 1) {
       $row = $result->fetch_array();
       $name = $row['name'];
@@ -48,13 +42,10 @@ if (isset($_GET['edit'])) {
 
 if (isset($_POST['update'])) {
    $id = $_POST['id'];
-   $name = $_POST['name'];
-   $location = $_POST['location'];
-   $summ = $_POST['summ'];
-   $address = $_POST['address'];
+   $comment = $_POST['comment'];
 
 
-   $mysqli->query("UPDATE desert1 SET name='$name', location='$location', summ='$summ', address='$address' WHERE id=$id") or die($mysqli->error);
+   $mysqli->query("UPDATE comment SET comment='$comment' WHERE id=$id") or die($mysqli->error);
 
    $_SESSION['message'] = "Информация о заказе была обновлена";
    $_SESSION['msg_type'] = "warning";

@@ -34,10 +34,10 @@
                <a class="nav-link" href="aboutus.html">О нас</a>
             </li>
             <li class="nav-item">
-               <a class="nav-link" href="#">Link</a>
+               <a class="nav-link" href="order.php">Заказать</a>
             </li>
             <li class="nav-item">
-               <a class="nav-link" href="contact.html">Контакты</a>
+               <a class="nav-link" href="contacts.php">Контакты</a>
             </li>
             <li class="nav-item">
                <a class="nav-link" href="crud.php">Пользователи</a>
@@ -93,8 +93,6 @@
       <?php
       $mysqli = new mysqli('std-mysql', 'std_972', 'dapa0803', 'std_972') or die(mysqli_error($mysqli));
       $result = $mysqli->query("SELECT * FROM contact") or die($mysqli->error);
-      //pre_r($result);
-      //pre_r($result->fetch_assoc());
       ?>
 
       <div class="row justify-content-center">
