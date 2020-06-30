@@ -12,6 +12,11 @@
       href="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/4.3.1/css/bootstrap-grid.min.css" />
    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.11.2/css/all.min.css">
    <link rel="stylesheet" type="text/css" href="css/contact.css">
+   <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/css/bootstrap.min.css"
+      integrity="sha384-9aIt2nRpC12Uk9gS9baDl411NQApFmC26EwAOH8WgZl5MYYxFfc+NcPb1dKGj7Sk" crossorigin="anonymous">
+   <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/js/bootstrap.min.js"
+      integrity="sha384-OgVRvuATP1z7JjHLkuOU7Xw704+h835Lr+6QL9UvYjZE3Ipu6Tp75j7Bh/kR0JKI" crossorigin="anonymous">
+   </script>
 
 
    <title>Document</title>
@@ -20,22 +25,33 @@
 <body>
    <main>
       <!-- Навигационное меню -->
-      <div class="navbar" id="myNavbar">
-         <div class="navbar__items">
-            <div class="navbar__logo">
-               <a href="index.html" class="active">Hedo Cakes</a>
-            </div>
+      <nav class="navbar navbar-expand-md bg-info navbar-dark">
+         <!-- Brand -->
+         <a class="navbar-brand" href="index.html">Hedo Cakes</a>
 
-            <a class="navbar__link" href="aboutus.html">О нас</a>
-            <a class="navbar__link" href="contact">Заказать</a>
-            <a class="navbar__link" href="contact.html">Контакты</a>
-            <a class="navbar__link" href="crud.php">Пользователи</a>
+         <!-- Toggler/collapsibe Button -->
+         <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#collapsibleNavbar">
+            <span class="navbar-toggler-icon"></span>
+         </button>
 
-            <a href="javascript:void(0);" class="icon" onclick="myFunction()">
-               <i class="fa fa-bars"></i>
-            </a>
+         <!-- Navbar links -->
+         <div class="collapse navbar-collapse" id="collapsibleNavbar">
+            <ul class="navbar-nav">
+               <li class="nav-item">
+                  <a class="nav-link" href="aboutus.html">О нас</a>
+               </li>
+               <li class="nav-item">
+                  <a class="nav-link" href="#">Link</a>
+               </li>
+               <li class="nav-item">
+                  <a class="nav-link" href="contact.html">Контакты</a>
+               </li>
+               <li class="nav-item">
+                  <a class="nav-link" href="crud.php">Пользователи</a>
+               </li>
+            </ul>
          </div>
-      </div>
+      </nav>
 
       <div class="container">
          <form id="contact" method="post">
@@ -60,7 +76,7 @@
             </fieldset>
 
          </form>
-      </div>
+         </>
 
 
 

@@ -37,7 +37,7 @@
                <a class="nav-link" href="#">Link</a>
             </li>
             <li class="nav-item">
-               <a class="nav-link" href="contacts.php">Контакты</a>
+               <a class="nav-link" href="contact.html">Контакты</a>
             </li>
             <li class="nav-item">
                <a class="nav-link" href="crud.php">Пользователи</a>
@@ -45,7 +45,37 @@
          </ul>
       </div>
    </nav>
-   <?php require_once 'process.php'; ?>
+   <?php require_once 'contactsprocess.php'; ?>
+   <div class=" row justify-content-center">
+      <h1>Свяжемся с вами </h1>
+   </div>
+
+   <div class=" row justify-content-center">
+      <form action="contactsprocess.php" method="POST">
+         <input type="hidden" name="id" value="<?php echo $id; ?>">
+         <div class="form-group">
+            <label>Имя</label>
+            <input type="text" name="name" class="form-control" value="<?php echo $name; ?>" placeholder="Введите ваше имя">
+         </div>
+         <div class="form-group">
+            <label>Почта</label>
+            <input type="text" name="location" class="form-control" value="<?php echo $location; ?>" placeholder="Введите вашу почту">
+         </div>
+         <div class="form-group">
+            <label>Телефон</label>
+            <input type="text" name="telephone" class="form-control" value="<?php echo $telephone; ?>" placeholder="Введите ваш телефон">
+         </div>
+         <div class="form-group">
+            <?php
+            if ($update == true) :
+            ?>
+               <button class="btn btn-info" type="submit" name="update">Обновить</button>
+            <?php else : ?>
+               <button class="btn btn-primary" type="submit" name="save">Сохранить</button>
+            <?php endif; ?>
+         </div>
+      </form>
+   </div>
 
    <?php
    if (isset($_SESSION['message'])) :
@@ -62,7 +92,7 @@
    <div class="container">
       <?php
       $mysqli = new mysqli('std-mysql', 'std_972', 'dapa0803', 'std_972') or die(mysqli_error($mysqli));
-      $result = $mysqli->query("SELECT * FROM data2") or die($mysqli->error);
+      $result = $mysqli->query("SELECT * FROM contact") or die($mysqli->error);
       //pre_r($result);
       //pre_r($result->fetch_assoc());
       ?>
@@ -73,6 +103,7 @@
                <tr>
                   <th>Имя</th>
                   <th>Почта</th>
+                  <th>Телефон</th>
                   <th colspan="2">Действие</th>
                </tr>
             </thead>
@@ -81,9 +112,10 @@
                <tr>
                   <td><?php echo $row['name']; ?></td>
                   <td><?php echo $row['location']; ?></td>
+                  <td><?php echo $row['telephone']; ?></td>
                   <td>
-                     <a href="crud.php?edit=<?php echo $row['id']; ?>" class="btn btn-info">Редактировать</a>
-                     <a href="process.php?delete=<?php echo $row['id']; ?>" class="btn btn-danger">Удалить</a>
+                     <a href="contacts.php?edit=<?php echo $row['id']; ?>" class="btn btn-info">Редактировать</a>
+                     <a href="contactsprocess.php?delete=<?php echo $row['id']; ?>" class="btn btn-danger">Удалить</a>
                   </td>
                </tr>
             <?php endwhile; ?>
@@ -102,28 +134,7 @@
 
       ?>
 
-      <div class=" row justify-content-center">
-         <form action="process.php" method="POST">
-            <input type="hidden" name="id" value="<?php echo $id; ?>">
-            <div class="form-group">
-               <label>Имя</label>
-               <input type="text" name="name" class="form-control" value="<?php echo $name; ?>" placeholder="Введите ваше имя">
-            </div>
-            <div class="form-group">
-               <label>Почта</label>
-               <input type="text" name="location" class="form-control" value="<?php echo $location; ?>" placeholder="Введите вашу почту">
-            </div>
-            <div class="form-group">
-               <?php
-               if ($update == true) :
-               ?>
-                  <button class="btn btn-info" type="submit" name="update">Обновить</button>
-               <?php else : ?>
-                  <button class="btn btn-primary" type="submit" name="save">Сохранить</button>
-               <?php endif; ?>
-            </div>
-         </form>
-      </div>
+
    </div>
 </body>
 
