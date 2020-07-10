@@ -8,14 +8,22 @@
    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@500&display=swap" rel="stylesheet">
    <link href="https://fonts.googleapis.com/css2?family=Roboto&family=Yellowtail&display=swap" rel="stylesheet">
    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.0.0/animate.min.css" />
-   <link rel="stylesheet" type="text/css"
-      href="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/4.3.1/css/bootstrap-grid.min.css" />
+
    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.11.2/css/all.min.css">
    <link rel="stylesheet" type="text/css" href="css/aboutus.css">
+   <link rel="stylesheet" href="css/animate.css">
+   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.0.0/animate.min.css" />
+
+
 
 
    <title>Document</title>
+   <!-- <script src="js/granim.min.js" charset="utf-8"></script> -->
 </head>
+<script src="js/wow.min.js"></script>
+<script>
+   new WOW().init();
+</script>
 
 <body>
    <div class="navbar" id="myNavbar">
@@ -25,8 +33,8 @@
          </div>
 
          <a class="navbar__link" href="aboutus.html">О нас</a>
-         <a class="navbar__link" href="#contact">Заказать</a>
-         <a class="navbar__link" href="contact.html">Контакты</a>
+         <a class="navbar__link" href="order.php">Заказать</a>
+         <a class="navbar__link" href="contacts.php">Контакты</a>
          <a class="navbar__link" href="crud.php">Пользователи</a>
 
          <a href="javascript:void(0);" class="icon" onclick="myFunction()">
@@ -36,44 +44,75 @@
    </div>
 
    <section id="about">
-      <div class="about__container">
+      <div class="about__container wow bounceInUp ">
          <div class="about__title">
-            <h1>О нас</h1>
+            <h1 class="animate__animated animate__backInLeft">О нас</h1>
          </div>
+
          <div class="about__text">
-            <p> Hedo Cake– активно развивающаяся сеть с авторскими десертами, качественным кофе и завтраками в течение
-               всего дня.
-               Также в меню собраны все самые популярные и любимые блюда.
+            <div сlass="about__button" id="demo">
+               <div class="about__button container">
 
-               На данный момент это десять атмосферных московских кафе, каждое из которых создано в индивидуальном
-               дизайне.
 
-               Это единственная в городе сеть кафе-кондитерских, ежедневно предлагающая гостям большой выбор тортов,
-               капкейков и пирожных собственного производства из натуральных ингредиентов.
+                  <button v-on:click="show = !show" class="btn btn-primary"> Прочитать</button>
+                  <transition name="fade">
+                     <p v-if="show"> Hedo Cake– активно развивающаяся сеть с авторскими десертами, качественным кофе и
+                        завтраками в
+                        течение
+                        всего дня.
+                        Также в меню собраны все самые популярные и любимые блюда.
 
-               Каждый сезон шеф-кондитеры обновляют десертную линейку, вдохновляясь мировыми трендами.
+                        На данный момент это десять атмосферных московских кафе, каждое из которых создано в
+                        индивидуальном
+                        дизайне.
 
-               Для важных событий, будь то день рождения, 8 марта или корпоратив – в ассортименте всегда представлены
-               сладкие подарки. Любой торт или капкейки можно заказать по индивидуальному дизайну и создать тематический
-               candy bar.
+                        Это единственная в городе сеть кафе-кондитерских, ежедневно предлагающая гостям большой выбор
+                        тортов,
+                        капкейков и пирожных собственного производства из натуральных ингредиентов.
 
-               Особое внимание в udcкафе уделяется кофе: бариста – призеры кофейных чемпионатов – отбирают самый удачные
-               лоты Африки и Южной Америки, создают уникальные смеси и в коллаборации с лучшими российскими
-               специалистами по обжарке представляют продукт эксклюзивного качества.
+                        Каждый сезон шеф-кондитеры обновляют десертную линейку, вдохновляясь мировыми трендами.
 
-               Завтраки в udcкафе доступны целый день. В основном меню собраны интернациональные хиты и кулинарные
-               бестселлеры всех времен и народов. Здесь каждый найдет «то самое» блюдо для обеда или ужина в любой
-               компании и в любом настроении. Это комфортная еда для души первоклассного качества на каждый день по
-               доступной цене.
+                        Для важных событий, будь то день рождения, 8 марта или корпоратив – в ассортименте всегда
+                        представлены
+                        сладкие подарки. Любой торт или капкейки можно заказать по индивидуальному дизайну и создать
+                        тематический
+                        candy bar.
 
-               Все это многообразие по желанию гостя с удовольствием доставят домой или в офис менее, чем за 90 минут.
-            </p>
+                        Особое внимание в udcкафе уделяется кофе: бариста – призеры кофейных чемпионатов – отбирают
+                        самый удачные
+                        лоты Африки и Южной Америки, создают уникальные смеси и в коллаборации с лучшими российскими
+                        специалистами по обжарке представляют продукт эксклюзивного качества.
+
+                        Завтраки в udcкафе доступны целый день. В основном меню собраны интернациональные хиты и
+                        кулинарные
+                        бестселлеры всех времен и народов. Здесь каждый найдет «то самое» блюдо для обеда или ужина в
+                        любой
+                        компании и в любом настроении. Это комфортная еда для души первоклассного качества на каждый
+                        день по
+                        доступной цене.
+
+                        Все это многообразие по желанию гостя с удовольствием доставят домой или в офис менее, чем за
+                        90 минут.
+                     </p>
+
+                  </transition>
+
+
+
+               </div>
+            </div>
+
          </div>
       </div>
 
 
-   </section>
 
+
+      <!-- <canvas id="canvas-basic"></canvas> -->
+
+
+   </section>
+   <canvas id="canvas-basic"></canvas>
 
    <footer>
       <div class="footer__menu">
@@ -83,8 +122,12 @@
          <div class="footer__link4"><a href="crud.php">Пользователи</a></div>
       </div>
    </footer>
+   <script src="https://cdn.jsdelivr.net/npm/vue/dist/vue.js"></script>
+   <script src="js/button.js"></script>
    <script src="js/script.js"></script>
    <script src="js/slider.js"></script>
+
+
 
 </body>
 
